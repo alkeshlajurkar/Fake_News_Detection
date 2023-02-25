@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.wd.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Fake News Detection</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome.css') }}">
+<link rel="stylesheet" href="/css/wd1.css">
+<script src="{{ url_for('static', filename='css/wd.css') }}"></script>
+
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.wd-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.wd-sidebar {width: 120px;background: #fff;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+
+</style>
+
+
+<body class="wd-black">
+
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="wd-sidebar wd-bar-block wd-small wd-hide-small wd-center">
+  <!-- Avatar image in top left corner -->
+  <a href="#" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/hom.svg" style="width:60px"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/user.svg"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#predict" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/speechbubble.svg"></i>
+    <p>PREDICT</p>
+  </a>
+  <a href="#team" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/group.svg"></i>
+    <p>TEAM</p>
+  </a>
+  <a href="#contact" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/phonebook.svg"></i>
+    <p>CONTACT</p>
+  </a>
+  <a href="#review" class="wd-bar-item wd-button wd-padding-large wd-white">
+    <i class="wd-xxlarge"><img src="/static/speechbubble.svg"></i>
+    <p>REVIEW</p>
+  </a>
+</nav>
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="wd-top wd-hide-large wd-hide-medium" id="myNavbar">
+  <div class="wd-bar wd-black wd-opacity wd-hover-opacity-off wd-center wd-small">
+    <a href="#" class="wd-bar-item wd-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="wd-bar-item wd-button" style="width:25% !important">ABOUT</a>
+    <a href="#predict" class="wd-bar-item wd-button" style="width:25% !important">PREDICT</a>
+	<a href="#team" class="wd-bar-item wd-button" style="width:25% !important">TEAM</a>
+    <a href="#contact" class="wd-bar-item wd-button" style="width:25% !important">CONTACT</a>
+	<a href="#review" class="wd-bar-item wd-button" style="width:25% !important">REVIEW</a>
+  </div>
+</div>
+
+
+<!-- Page Content -->
+<div class="wd-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="wd-container wd-padding-32 wd-center wd-black wd-opacity wd-hover-opacity-off" id="home">
+  <br>
+    <h2 style="font-size:4vw">FAKE NEWS DETECTION</h2>
+    <h3 style="font-size:2vw"><p>We believe in Truth<br>Right News for Right People</p></h3>
+    <img src="/static/fakenews.jpg" alt="boy" class="wd-image" width="500" height="500">
+  </header>
+
+
+  <!-- About Section -->
+  <div class="wd-content wd-justify wd-text-grey wd-padding-64" id="about">
+    <h2 class="wd-text-light-grey">About System</h2>
+    <hr style="width:200px" class="wd-opacity">
+    <p>Today is a world of information, everyone from each and every age group is using smartphone 
+      which has social media, which spreads information. This information is not always correct, 
+      sometime fake information is populated through social media. This spreading of fake news is 
+      being a very big issue across the globe. This fake news are being incorporated in human minds 
+      via social media. We read the articles on Facebook, WhatsApp, Instagram, Twitter Etc. 
+      Sometime these articles give us wrong message or incorrect message which is also called fake 
+      news. This fake news is being a very big scam in which many people are being trapped. To 
+      solve this big issue, we have developed a system called “Fake news detection system”. 
+    </p><br><br>
+    <h3 class="wd-padding-16 wd-text-light-grey">Project Confusion Matrix</h3>
+    <p class="wd-wide">PRECISION</p>
+    <div class="wd-white">
+      <div class="wd-dark-grey wd-center" style="height:28px;width:94%">94%</div>
+    </div>
+    <p class="wd-wide">RECALL</p>
+    <div class="wd-white">
+      <div class="wd-dark-grey wd-center" style="height:28px;width:97%">97%</div>
+    </div>
+	<p class="wd-wide">F1-SCORE</p>
+    <div class="wd-white">
+      <div class="wd-dark-grey wd-center" style="height:28px;width:95%">95%</div>
+    </div>
+    <p class="wd-wide">ACCURACY</p>
+    <div class="wd-white">
+      <div class="wd-dark-grey wd-center" style="height:28px;width:95%">95%</div>
+    </div><br><br><br><br><br>
+    
+    <!--<div class="wd-row wd-center wd-padding-16 wd-section wd-light-grey">
+      <div class="wd-quarter wd-section">
+        <span class="wd-xlarge">4+</span><br>
+        Partners
+      </div>
+      <div class="wd-quarter wd-section">
+        <span class="wd-xlarge">8+</span><br>
+        Projects Done
+      </div>
+      <div class="wd-quarter wd-section">
+        <span class="wd-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="wd-quarter wd-section">
+        <span class="wd-xlarge">150+</span><br>
+        Web Design Requests
+      </div>
+    </div>//-->
+
+     
+ <!-- Predict Section -->
+  <div class="wd-padding-64 wd-content wd-text-grey" id="predict">
+    <h2 class="wd-text-light-grey">News Prediction</h2>
+    <hr style="width:200px" class="wd-opacity">
+    <br><p><b>{{prediction_text}}</b></p>
+    <form action="/prediction" target="_blank" autocomplete="off" method="POST">
+     <p><textarea  class="wd-input wd-padding-16" id="news" name="news" placeholder="Write News Headline.."required style="height:200px"></textarea></p>
+      <p>
+        <button class="wd-button wd-light-grey wd-padding-large" type="submit">
+          <i><img src="/static/compass.svg" style="width:20px"></i> PREDICT
+        </button>
+      </p>
+    </form>
+  <!-- End Predict Section -->
+  </div>
+  <br><br><br>
+   
+  
+  <!-- Team Section -->
+  <div class="wd-padding-64 wd-content" id="team">
+    <h2 class="wd-text-light-grey">Our Team</h2>
+    <hr style="width:200px" class="wd-opacity"> 
+    <img src="/static/user2.png" alt="Avatar" class="wd-left wd-circle wd-margin-right" style="width:100px">
+    <p style="color:black">Akansha S. Umak<br>CSE-'C' PRMIT&R<br>Roll No.-9</p><br><br><br>
+    
+    <img src="/static/user2.png" alt="Avatar" class="wd-left wd-circle wd-margin-right" style="width:100px">
+    <p style="color:black">Abhijeet R. Rupune<br>CSE-'C' PRMIT&R<br>Roll No.-10</p><br><br><br>
+	
+    <img src="/static/user2.png" alt="Avatar" class="wd-left wd-circle wd-margin-right" style="width:100px">
+    <p style="color:black">Alkesh S. Lajurkar<br>CSE-'C' PRMIT&R<br>Roll No.-11</p><br><br><br>
+	
+    <img src="/static/user2.png"alt="Avatar" class="wd-left wd-circle wd-margin-right" style="width:100px">
+    <p style="color:black">Madhubala Lahabar<br>CSE-'C' PRMIT&R<br>Roll No.-12</p><br><br><br>
+  </div>
+  
+   <!-- End Team Section -->
+
+  <!-- Contact Section -->
+  <div class="wd-padding-64 wd-content wd-text-grey" id="contact">
+    <h2 class="wd-text-light-grey">Contact Us</h2>
+    <hr style="width:200px" class="wd-opacity">
+
+    <div class="wd-section">
+      <p><i class="wd-text-white wd-xxlarge wd-margin-right"><img src="/static/maps.svg" style="max-height:6vh"></i>Prof. Ram Meghe Institute of Technology & Research, Badnera-Amravati</p>
+      <p><i class="wd-text-white wd-xxlarge wd-margin-right"><img src="/static/phone.svg" style="max-height:6vh"></i> Mobile. No.:8390956095/9370193470</p>
+      <p><i class="wd-text-white wd-xxlarge wd-margin-right"><img src="/static/email (1).svg" style="max-height:6vh"> </i> Email: alkeshlajurkar@gmail.com</p>
+    <p>Lets get in touch. Send a message:</p>
+
+    <form action="contact_action.jsp" target="_blank" autocomplete="off">
+      <p><input class="wd-input wd-padding-16" id="fname" type="text" placeholder="Name" required name="fname"></p>
+      <p><input class="wd-input wd-padding-16" id="lname" type="email" placeholder="Email" required name="email"></p>
+      <p><textarea  class="wd-input wd-padding-16" id="subject" name="subject" placeholder="Write something.."required style="height:200px"></textarea></p>
+      <p>
+        <button class="wd-button wd-light-grey wd-padding-large" type="submit">
+          <i><img src="/static/compass.svg" style="width:20px"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  <br><br><br>
+  
+ <!-- Review Section -->
+  <div class="wd-padding-64 wd-content wd-text-grey" id="review">
+    <h2 class="wd-text-light-grey">Review For Website</h2>
+    <hr style="width:200px" class="wd-opacity">
+
+    <form action="work_action.jsp" target="_blank" autocomplete="off">
+      <p><input class="wd-input wd-padding-16" id="fname" type="text" placeholder="Name" required name="fname"></p>
+      <p><input class="wd-input wd-padding-16" id="fname" type="text" placeholder="College Name/Work Place Name" required name="address"></p>
+      <p><textarea  class="wd-input wd-padding-16" id="subject" name="review" placeholder="Write something.."required style="height:200px"></textarea></p>
+      <p>
+        <button class="wd-button wd-light-grey wd-padding-large" type="submit">
+          <i><img src="/static/compass.svg" style="width:20px"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Review Section -->
+  </div>
+ 
+    <!-- Footer -->
+  <footer class="wd-content wd-padding-64 wd-text-grey wd-xlarge">
+    <a href="https://m.facebook.com"><i class="wd-hover-opacity"><img src="/static/facebook.svg" style="width:40px"></i></a>
+    <i class="wd-hover-opacity"><img src="/static/instagram.svg" style="width:40px"></i>
+    <i class="wd-hover-opacity"><img src="/static/twitter.svg" style="width:40px"></i>
+    <a href="https://www.youtube.com/channel/UCRrU7e4xhx9ttLQFHOYmULw?view_as=subscriber"><i class="wd-hover-opacity"><img src="/static/youtube.svg" style="width:55px"></i></a>
+    <p class="wd-medium">Developed by <a href="http://webdominator.in/Web/" target="_blank" class="wd-hover-text-green">TechConnect</a></p>
+    <p class="wd-medium">&copy Copyright-2020 All Right Reserved, Developed by Team TechConnect</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+
+</body>
+</html>
